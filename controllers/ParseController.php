@@ -96,8 +96,8 @@ class ParseController extends Controller
 
     public function actionIndex()
     {
-        $old_news=$this->LastOne(); //Последний заголвок БД
-       //$old_news=$this->Parse($this->sel_from_title,$this->sel_as_title,$this->url,$this->for_example);
+        //$old_news=$this->LastOne(); //Последний заголвок БД
+       $old_news=$this->Parse($this->sel_from_title,$this->sel_as_title,$this->url,$this->for_example);
         $new_news=$this->Parse($this->sel_from_title,$this->sel_as_title,$this->url,$this->number);
         if (
             $this->Fullparse($this->sel_from_title,
